@@ -1,0 +1,9 @@
+---
+// Bilingual text. Pass {en, kn}; both are in the page and CSS shows the chosen one.
+// Plain strings/numbers are shown as they are.
+const { v } = Astro.props;
+const isObj = v && typeof v === 'object';
+---
+{isObj
+  ? <><span class="l-kn" lang="kn">{v.kn ?? v.en}</span><span class="l-en" lang="en">{v.en ?? v.kn}</span></>
+  : v}

@@ -1,0 +1,83 @@
+# ============================================================
+#  SITE SETTINGS  -  edit this file to change temple details.
+#  Every text has two languages:  en = English,  kn = Kannada
+# ============================================================
+
+name:
+  en: Sri Venkateshwara Swamy Temple
+  kn: ಶ್ರೀ ವೆಂಕಟೇಶ್ವರ ಸ್ವಾಮಿ ದೇವಸ್ಥಾನ
+city:
+  en: Vijayapura (Bijapur)
+  kn: ವಿಜಯಪುರ (ಬಿಜಾಪುರ)
+# Institution / peetha the temple belongs to (shown in banner, header and footer).
+# Leave as {en: "", kn: ""} to hide it.
+institution:
+  en: "Vyasa Madhwa Vidya Peeta"
+  kn: "ವ್ಯಾಸ ಮಧ್ವ ವಿದ್ಯಾಪೀಠ"
+tagline:
+  en: "Om Namo Venkatesaya"
+  kn: "ಓಂ ನಮೋ ವೆಂಕಟೇಶಾಯ"
+
+established: 2016
+
+phones:
+  - "+91 8310188026"
+  - "+91 9538946493"
+whatsapp: "918310188026"      # digits only, with country code
+email: ""                     # add later, e.g. info@yourdomain.org
+
+address:
+  en: "Kulkarni Layout, Vijayapura (Bijapur), Karnataka"
+  kn: "ಕುಲಕರ್ಣಿ ಲೇಔಟ್, ವಿಜಯಪುರ (ಬಿಜಾಪುರ), ಕರ್ನಾಟಕ"
+
+# Open Google Maps, search the temple, click Share > Copy link, paste below.
+map_link: "https://www.google.com/maps/search/?api=1&query=Venkateshwara+Temple+Kulkarni+Layout+Vijayapura"
+# Optional: Share > Embed a map > copy only the src="..." URL. Leave empty to hide the map.
+map_embed: ""
+
+timings:
+  - label: { en: "Morning Darshan opens", kn: "ಬೆಳಗಿನ ದರ್ಶನ ಆರಂಭ" }
+    time: "6:00 AM"
+  - label: { en: "Daily Pooja", kn: "ನಿತ್ಯ ಪೂಜೆ" }
+    time: "~ 7:00 AM"
+  - label: { en: "Evening Bhajane", kn: "ಸಂಜೆ ಭಜನೆ" }
+    time: { en: "Evening", kn: "ಸಂಜೆ" }
+  - label: { en: "Temple closes", kn: "ದೇವಸ್ಥಾನ ಮುಚ್ಚುವ ಸಮಯ" }
+    time: "9:00 PM"
+
+# ---- UPI donations ----
+upi:
+  id: "9538946493@ybl"
+  name: "Shweta Raghavendra Desai"
+  note: "Temple Donation"
+
+# ---- Social / live links (leave "" to hide) ----
+youtube: ""
+instagram: ""
+facebook: ""
+
+# ---- About the temple ----
+history:
+  - en: "Sri Venkateshwara Swamy Temple in Vijayapura (Bijapur) was established in 2016. The presiding deity is a divine, single-stone (Ekashila) Saligrama murti of Lord Venkateshwara."
+    kn: "ವಿಜಯಪುರ (ಬಿಜಾಪುರ) ಶ್ರೀ ವೆಂಕಟೇಶ್ವರ ಸ್ವಾಮಿ ದೇವಸ್ಥಾನವು 2016ರಲ್ಲಿ ಸ್ಥಾಪನೆಯಾಯಿತು. ಇಲ್ಲಿನ ಮೂಲ ದೇವರು ಏಕಶಿಲಾ ಸಾಲಿಗ್ರಾಮ ಸ್ವರೂಪದ ಶ್ರೀ ವೆಂಕಟೇಶ್ವರ ಸ್ವಾಮಿ."
+  - en: "Before the temple was built, the Lord was worshipped with great devotion in a priest's home. As devotees grew in number, the deity was moved to the present temple in Kulkarni Layout."
+    kn: "ದೇವಸ್ಥಾನ ನಿರ್ಮಾಣಕ್ಕೂ ಮೊದಲು ಸ್ವಾಮಿಯನ್ನು ಅರ್ಚಕರ ಮನೆಯಲ್ಲಿ ಅತ್ಯಂತ ಭಕ್ತಿಯಿಂದ ಆರಾಧಿಸಲಾಗುತ್ತಿತ್ತು. ಭಕ್ತರ ಸಂಖ್ಯೆ ಹೆಚ್ಚಾದಂತೆ ಮೂರ್ತಿಯನ್ನು ಇಂದಿನ ಕುಲಕರ್ಣಿ ಲೇಔಟ್‌ನ ದೇವಸ್ಥಾನಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸಲಾಯಿತು."
+  - en: "The Prana Pratishtapana (sacred installation) of the deity in the present temple was performed by Sri Sri 1008 Satyatma Tirtha Sripadaru of Uttaradi Math."
+    kn: "ಪ್ರಸ್ತುತ ದೇವಸ್ಥಾನದಲ್ಲಿ ಮೂರ್ತಿಯ ಪ್ರಾಣಪ್ರತಿಷ್ಠಾಪನೆಯನ್ನು ಉತ್ತರಾದಿ ಮಠದ ಶ್ರೀ ಶ್ರೀ 1008 ಸತ್ಯಾತ್ಮ ತೀರ್ಥ ಶ್ರೀಪಾದರು ನೆರವೇರಿಸಿದರು."
+
+facts:
+  - value: "2016"
+    label: { en: "Temple established", kn: "ಸ್ಥಾಪನೆ" }
+  - value: "Ekashila"
+    label: { en: "Saligrama deity", kn: "ಸಾಲಿಗ್ರಾಮ ಮೂರ್ತಿ" }
+  - value: "10th"
+    label: { en: "Navaratri this year", kn: "ಈ ವರ್ಷದ ನವರಾತ್ರಿ" }
+  - value: "6AM-9PM"
+    label: { en: "Open daily", kn: "ಪ್ರತಿದಿನ ತೆರೆದಿರುತ್ತದೆ" }
+
+# ---- How donations are used (shown on Donate page) ----
+donation_uses:
+  - { en: "Daily pooja, naivedya and flowers", kn: "ನಿತ್ಯ ಪೂಜೆ, ನೈವೇದ್ಯ ಮತ್ತು ಹೂವುಗಳು" }
+  - { en: "Festival celebrations such as Navaratri", kn: "ನವರಾತ್ರಿಯಂತಹ ಹಬ್ಬದ ಆಚರಣೆಗಳು" }
+  - { en: "Annadana (community meals)", kn: "ಅನ್ನದಾನ" }
+  - { en: "Temple maintenance and development", kn: "ದೇವಸ್ಥಾನದ ನಿರ್ವಹಣೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ" }

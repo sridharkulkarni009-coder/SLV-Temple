@@ -1,0 +1,59 @@
+---
+import QRCode from 'qrcode';
+import Base from '../layouts/Base.astro';
+import L from '../components/L.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import { load, makeUI } from '../lib/content.js';
+
+const site = load('site');
+const u = makeUI();
+const upi = site.upi;
+const link = `upi://pay?pa=${encodeURIComponent(upi.id)}&pn=${encodeURIComponent(upi.name)}&cu=INR&tn=${encodeURIComponent(upi.note)}`;
+const qr = await QRCode.toString(link, { type: 'svg', margin: 1, color: { dark: '#b0243a', light: '#ffffff' } });
+---
+<Base path="donate/">
+  <section class="block">
+    <div class="container">
+      <SectionTitle title={u('donate_title')} sub={u('donate_intro')} />
+      <div class="donate-box">
+        <div class="qr">
+          <div set:html={qr}></div>
+          <p><strong><L v={u('scan_pay')} /></strong></p>
+        </div>
+        <div>
+          <p class="upi-line"><L v={u('upi_id_label')} />: <code id="upi-id">{upi.id}</code></p>
+          <p class="upi-line"><L v={u('account_name')} />: <strong>{upi.name}</strong></p>
+          <p style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-gold" href={link}><L v={u('pay_now')} /></a>
+            <button class="btn btn-primary" id="copy-btn" type="button">
+              <span class="copy-label"><L v={u('copy')} /></span>
+              <span class="copy-ok" hidden><L v={u('copied')} /></span>
+            </button>
+          </p>
+          <p class="donate-note"><L v={u('donate_note')} /></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="container" style="max-width:800px">
+      <SectionTitle title={u('use_title')} />
+      <div class="card">
+        <ul class="dolist">{site.donation_uses.map((x) => <li><L v={x} /></li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    var b = document.getElementById('copy-btn');
+    b.addEventListener('click', function () {
+      var id = document.getElementById('upi-id').textContent;
+      var label = b.querySelector('.copy-label'), ok = b.querySelector('.copy-ok');
+      (navigator.clipboard ? navigator.clipboard.writeText(id) : Promise.reject()).then(function () {
+        label.hidden = true; ok.hidden = false;
+        setTimeout(function () { label.hidden = false; ok.hidden = true; }, 2000);
+      }).catch(function () {});
+    });
+  </script>
+</Base>

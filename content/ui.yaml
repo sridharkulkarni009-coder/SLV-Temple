@@ -1,0 +1,54 @@
+# Menu and button labels in both languages.
+nav_home:      { en: "Home", kn: "ಮುಖಪುಟ" }
+nav_navaratri: { en: "Navaratri", kn: "ನವರಾತ್ರಿ" }
+nav_about:     { en: "About", kn: "ದೇವಸ್ಥಾನ" }
+nav_gallery:   { en: "Gallery", kn: "ಗ್ಯಾಲರಿ" }
+nav_donate:    { en: "Donate", kn: "ದೇಣಿಗೆ" }
+nav_contact:   { en: "Visit & Contact", kn: "ಸಂಪರ್ಕ" }
+lang_switch:   { en: "ಕನ್ನಡ", kn: "English" }
+
+hero_btn_navaratri: { en: "Navaratri Programme", kn: "ನವರಾತ್ರಿ ಕಾರ್ಯಕ್ರಮ" }
+hero_btn_donate:    { en: "Donate via UPI", kn: "UPI ದೇಣಿಗೆ" }
+timings_title:      { en: "Darshan Timings", kn: "ದರ್ಶನ ಸಮಯ" }
+announce_title:     { en: "Announcements", kn: "ಪ್ರಕಟಣೆಗಳು" }
+navaratri_live:     { en: "Navaratri is on - Today", kn: "ನವರಾತ್ರಿ ನಡೆಯುತ್ತಿದೆ - ಇಂದು" }
+navaratri_soon:     { en: "Navaratri begins in", kn: "ನವರಾತ್ರಿ ಆರಂಭಕ್ಕೆ" }
+days_word:          { en: "days", kn: "ದಿನಗಳು" }
+navaratri_over:     { en: "Navaratri concluded. See you next year!", kn: "ನವರಾತ್ರಿ ಮುಕ್ತಾಯ. ಮುಂದಿನ ವರ್ಷ ಭೇಟಿಯಾಗೋಣ!" }
+edition_label:      { en: "th Navaratri Utsava", kn: "ನೇ ನವರಾತ್ರಿ ಉತ್ಸವ" }
+today_badge:        { en: "TODAY", kn: "ಇಂದು" }
+view_all:           { en: "View full programme", kn: "ಪೂರ್ಣ ಕಾರ್ಯಕ್ರಮ ನೋಡಿ" }
+
+what_is:            { en: "What is Navaratri?", kn: "ನವರಾತ್ರಿ ಎಂದರೇನು?" }
+at_temple:          { en: "At our temple every day", kn: "ನಮ್ಮ ದೇವಸ್ಥಾನದಲ್ಲಿ ಪ್ರತಿದಿನ" }
+special_events:     { en: "Special Events", kn: "ವಿಶೇಷ ಕಾರ್ಯಕ್ರಮಗಳು" }
+nine_days:          { en: "Day-by-Day Guide", kn: "ದಿನದಿಂದ ದಿನದ ಮಾರ್ಗದರ್ಶಿ" }
+temple_programme:   { en: "Temple programme", kn: "ದೇವಸ್ಥಾನದ ಕಾರ್ಯಕ್ರಮ" }
+colour_label:       { en: "Colour of the day", kn: "ದಿನದ ಬಣ್ಣ" }
+dos_title:          { en: "Do's", kn: "ಮಾಡಬೇಕಾದವು" }
+donts_title:        { en: "Don'ts", kn: "ಮಾಡಬಾರದವು" }
+date_tbd:           { en: "Date to be announced", kn: "ದಿನಾಂಕ ತಿಳಿಸಲಾಗುವುದು" }
+
+about_title:        { en: "About the Temple", kn: "ದೇವಸ್ಥಾನದ ಬಗ್ಗೆ" }
+donate_title:       { en: "Offer your Seva", kn: "ನಿಮ್ಮ ಸೇವೆ ಅರ್ಪಿಸಿ" }
+donate_intro:       { en: "Every contribution, big or small, helps us conduct daily pooja, festivals and annadana.", kn: "ನಿಮ್ಮ ಪ್ರತಿ ಕಾಣಿಕೆಯೂ ನಿತ್ಯ ಪೂಜೆ, ಹಬ್ಬಗಳು ಮತ್ತು ಅನ್ನದಾನಕ್ಕೆ ನೆರವಾಗುತ್ತದೆ." }
+scan_pay:           { en: "Scan with any UPI app", kn: "ಯಾವುದೇ UPI ಆ್ಯಪ್‌ನಿಂದ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ" }
+pay_now:            { en: "Pay with UPI app", kn: "UPI ಆ್ಯಪ್‌ನಿಂದ ಪಾವತಿಸಿ" }
+upi_id_label:       { en: "UPI ID", kn: "UPI ಐಡಿ" }
+account_name:       { en: "Account name", kn: "ಖಾತೆದಾರರ ಹೆಸರು" }
+copy:               { en: "Copy UPI ID", kn: "UPI ಐಡಿ ನಕಲಿಸಿ" }
+copied:             { en: "Copied!", kn: "ನಕಲಿಸಲಾಗಿದೆ!" }
+use_title:          { en: "How your donation is used", kn: "ನಿಮ್ಮ ದೇಣಿಗೆಯ ಬಳಕೆ" }
+donate_note:        { en: "Please verify the name shown in your UPI app before paying. Contact the temple for a receipt.", kn: "ಪಾವತಿಸುವ ಮೊದಲು ನಿಮ್ಮ UPI ಆ್ಯಪ್‌ನಲ್ಲಿ ತೋರಿಸುವ ಹೆಸರನ್ನು ಪರಿಶೀಲಿಸಿ. ರಸೀದಿಗಾಗಿ ದೇವಸ್ಥಾನವನ್ನು ಸಂಪರ್ಕಿಸಿ." }
+
+gallery_title:      { en: "Photo Gallery", kn: "ಛಾಯಾಚಿತ್ರ ಗ್ಯಾಲರಿ" }
+gallery_empty:      { en: "Photos will be added soon.", kn: "ಚಿತ್ರಗಳನ್ನು ಶೀಘ್ರದಲ್ಲೇ ಸೇರಿಸಲಾಗುವುದು." }
+
+contact_title:      { en: "Visit & Contact", kn: "ಭೇಟಿ ಮತ್ತು ಸಂಪರ್ಕ" }
+address_label:      { en: "Address", kn: "ವಿಳಾಸ" }
+phone_label:        { en: "Phone", kn: "ದೂರವಾಣಿ" }
+open_map:           { en: "Open in Google Maps", kn: "ಗೂಗಲ್ ಮ್ಯಾಪ್‌ನಲ್ಲಿ ತೆರೆಯಿರಿ" }
+whatsapp_btn:       { en: "Chat on WhatsApp", kn: "ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಮಾತನಾಡಿ" }
+call_btn:           { en: "Call", kn: "ಕರೆ ಮಾಡಿ" }
+
+footer_text:        { en: "Made with devotion for devotees.", kn: "ಭಕ್ತರಿಗಾಗಿ ಭಕ್ತಿಯಿಂದ ರೂಪಿಸಲಾಗಿದೆ." }

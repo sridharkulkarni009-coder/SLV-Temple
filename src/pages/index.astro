@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+import L from '../components/L.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import NavaratriBanner from '../components/NavaratriBanner.astro';
+import { load, makeUI } from '../lib/content.js';
+
+const site = load('site');
+const nv = load('navaratri');
+const gallery = load('gallery');
+const notes = (load('announcements') || []).filter((a) => a.show !== false);
+const u = makeUI();
+const hero = gallery.hero_image;
+---
+<Base path="">
+  <NavaratriBanner />
+
+  <section class="hero">
+    <div class={`container ${hero ? 'hero-split' : ''}`}>
+      <div class="hero-text">
+        <div class="lamps">🪔 🪔 🪔</div>
+        <div class="om">ॐ</div>
+        <h1><L v={site.name} /></h1>
+        {site.institution?.en && <p class="peeta">❖ <L v={site.institution} /> ❖</p>}
+        <p class="sub"><L v={site.city} /> · <L v={site.tagline} /></p>
+        <div class="btns">
+          <a class="btn btn-gold" href="/navaratri/"><L v={u('hero_btn_navaratri')} /></a>
+          <a class="btn btn-ghost" href="/donate/"><L v={u('hero_btn_donate')} /></a>
+        </div>
+      </div>
+      {hero && (
+        <div class="hero-photo">
+          <img src={hero} alt="Sri Venkateshwara Swamy" width="816" height="1280" />
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container grid g4">
+      {site.facts.map((f) => (
+        <div class="card fact"><div class="v">{f.value}</div><div class="l"><L v={f.label} /></div></div>
+      ))}
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="container grid g2">
+      <div>
+        <SectionTitle title={u('timings_title')} />
+        <div class="card">
+          <ul class="timings">
+            {site.timings.map((x) => (
+              <li><span><L v={x.label} /></span><strong><L v={x.time} /></strong></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div>
+        <SectionTitle title={u('announce_title')} />
+        {notes.map((a) => (
+          <div class="notice">
+            <small>{a.date}</small>
+            <h3><L v={a.title} /></h3>
+            <p><L v={a.text} /></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <SectionTitle title={u('special_events')} />
+      <div class="grid g3">
+        {nv.special_events.map((e) => (
+          <div class="card">
+            <div class="icon-big">{e.icon}</div>
+            <h3><L v={e.title} /></h3>
+            <p><L v={e.text} /></p>
+          </div>
+        ))}
+        {nv.daily_programme.map((e) => (
+          <div class="card">
+            <div class="icon-big">{e.icon}</div>
+            <h3><L v={e.title} /> <small>· <L v={e.time} /></small></h3>
+            <p><L v={e.text} /></p>
+          </div>
+        ))}
+      </div>
+      <p style="text-align:center;margin-top:24px">
+        <a class="btn btn-primary" href="/navaratri/"><L v={u('view_all')} /></a>
+      </p>
+    </div>
+  </section>
+</Base>

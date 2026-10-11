@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+import L from '../components/L.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import NavaratriBanner from '../components/NavaratriBanner.astro';
+import { load, makeUI } from '../lib/content.js';
+
+const nv = load('navaratri');
+const u = makeUI();
+
+// Dates in both languages -> {en, kn}
+const toDate = (iso) => { const [y, m, d] = iso.split('-').map(Number); return new Date(Date.UTC(y, m - 1, d)); };
+const fmtOne = (iso, locale, opts) => toDate(iso).toLocaleDateString(locale, { ...opts, timeZone: 'UTC' });
+const fmt = (iso) => {
+  const o = { weekday: 'short', day: 'numeric', month: 'short' };
+  return { en: fmtOne(iso, 'en-IN', o), kn: fmtOne(iso, 'kn-IN', o) };
+};
+const dayNum = (iso) => Number(iso.split('-')[2]);
+const mon = (iso) => ({ en: fmtOne(iso, 'en-IN', { month: 'short' }), kn: fmtOne(iso, 'kn-IN', { month: 'short' }) });
+---
+<Base path="navaratri/">
+  <NavaratriBanner />
+
+  <section class="hero" style="padding:60px 0 80px">
+    <div class="container">
+      <div class="lamps">🪔 🪔 🪔</div>
+      <h1>{nv.edition}<L v={u('edition_label')} /> {nv.year}</h1>
+      <p class="sub"><L v={fmt(nv.start)} /> → <L v={fmt(nv.end)} /></p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container prose" style="max-width:820px">
+      <SectionTitle title={u('what_is')} />
+      {nv.intro.map((p) => <p><L v={p} /></p>)}
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="container">
+      <SectionTitle title={u('at_temple')} />
+      <div class="grid g3">
+        {nv.daily_programme.map((e) => (
+          <div class="card">
+            <div class="icon-big">{e.icon}</div>
+            <h3><L v={e.title} /></h3>
+            <strong><L v={e.time} /></strong>
+            <p><L v={e.text} /></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <SectionTitle title={u('special_events')} />
+      <div class="grid g2">
+        {nv.special_events.map((e) => (
+          <div class="card">
+            <div class="icon-big">{e.icon}</div>
+            <h3><L v={e.title} /></h3>
+            <p><L v={e.text} /></p>
+            <small>📅 <L v={e.date ? fmt(e.date) : u('date_tbd')} /></small>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="container" style="max-width:900px">
+      <SectionTitle title={u('nine_days')} />
+      {nv.days.map((d) => (
+        <div class="day" data-date={d.date}>
+          <div class="badge" style={`background:${d.color}`}>
+            <b>{dayNum(d.date)}</b><span><L v={mon(d.date)} /></span>
+          </div>
+          <div class="body">
+            <h3><L v={d.title} /><span class="today-tag" hidden><L v={u('today_badge')} /></span></h3>
+            <div class="goddess"><L v={d.name} /></div>
+            <p><L v={d.meaning} /></p>
+            <span class="chip"><i class="dot" style={`background:${d.color}`}></i><L v={u('colour_label')} /></span>
+            <div class="temple">🛕 <strong><L v={u('temple_programme')} />:</strong> <L v={d.temple} /></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container grid g2">
+      <div class="card dos">
+        <h3>✅ <L v={u('dos_title')} /></h3>
+        <ul class="dolist">{nv.dos.map((x) => <li><L v={x} /></li>)}</ul>
+      </div>
+      <div class="card donts">
+        <h3>🚫 <L v={u('donts_title')} /></h3>
+        <ul class="dolist">{nv.donts.map((x) => <li><L v={x} /></li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var n = new Date();
+      var today = n.getFullYear() + '-' + String(n.getMonth() + 1).padStart(2, '0') + '-' + String(n.getDate()).padStart(2, '0');
+      document.querySelectorAll('.day').forEach(function (el) {
+        if (el.dataset.date === today) {
+          el.classList.add('today');
+          var tag = el.querySelector('.today-tag');
+          if (tag) tag.hidden = false;
+        }
+      });
+    })();
+  </script>
+</Base>

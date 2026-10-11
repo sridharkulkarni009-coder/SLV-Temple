@@ -1,0 +1,15 @@
+# Put photos in  public/images/gallery/  then add a line for each one.
+# Example (remove the # to activate):
+#
+# - file: "navaratri-2025-1.jpg"
+#   caption: { en: "Navaratri alankara 2025", kn: "ನವರಾತ್ರಿ ಅಲಂಕಾರ 2025" }
+#
+# Hero photo of the deity: save as public/images/deity.jpg  and set hero_image below.
+hero_image: "/images/deity.jpg"
+photos:
+  - file: "temple-hall.jpg"
+    caption: { en: "Navaratri pooja in the temple hall", kn: "ದೇವಸ್ಥಾನದ ಸಭಾಂಗಣದಲ್ಲಿ ನವರಾತ್ರಿ ಪೂಜೆ" }
+  - file: "ghata-sthapana.jpg"
+    caption: { en: "Ghata sthapana - Navaratri begins", kn: "ಘಟಸ್ಥಾಪನೆ - ನವರಾತ್ರಿ ಆರಂಭ" }
+  - file: "navaratri-pooja.jpg"
+    caption: { en: "Navaratri sankalpa pooja", kn: "ನವರಾತ್ರಿ ಸಂಕಲ್ಪ ಪೂಜೆ" }

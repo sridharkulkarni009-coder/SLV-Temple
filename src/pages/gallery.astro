@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import L from '../components/L.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import { load, en, makeUI } from '../lib/content.js';
+
+const g = load('gallery');
+const photos = g.photos || [];
+const u = makeUI();
+---
+<Base path="gallery/">
+  <section class="block">
+    <div class="container">
+      <SectionTitle title={u('gallery_title')} />
+      {photos.length === 0 ? (
+        <div class="empty"><L v={u('gallery_empty')} /></div>
+      ) : (
+        <div class="gallery">
+          {photos.map((p) => (
+            <figure>
+              <img src={`/images/gallery/${p.file}`} alt={en(p.caption)} loading="lazy" />
+              {p.caption && <figcaption><L v={p.caption} /></figcaption>}
+            </figure>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Base>

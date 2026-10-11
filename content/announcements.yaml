@@ -1,0 +1,6 @@
+# Add the newest notice at the TOP. Remove old ones when no longer needed.
+# Set  show: false  to hide a notice without deleting it.
+- date: "2026-10-11"
+  show: true
+  title: { en: "Navaratri Utsava begins", kn: "ನವರಾತ್ರಿ ಉತ್ಸವ ಆರಂಭ" }
+  text: { en: "10th Navaratri celebrations from 11 to 21 October. Daily pooja at 7 AM and bhajane in the evening. All devotees are welcome.", kn: "10ನೇ ವರ್ಷದ ನವರಾತ್ರಿ ಉತ್ಸವ ಅಕ್ಟೋಬರ್ 11 ರಿಂದ 21ರ ವರೆಗೆ. ಪ್ರತಿದಿನ ಬೆಳಿಗ್ಗೆ 7ಕ್ಕೆ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ. ಎಲ್ಲಾ ಭಕ್ತರಿಗೆ ಸ್ವಾಗತ." }

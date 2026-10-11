@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import L from '../components/L.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import { load, makeUI } from '../lib/content.js';
+
+const site = load('site');
+const u = makeUI();
+---
+<Base path="about/">
+  <section class="block">
+    <div class="container prose" style="max-width:820px">
+      <SectionTitle title={u('about_title')} />
+      {site.history.map((p) => <p><L v={p} /></p>)}
+    </div>
+  </section>
+  <section class="block alt">
+    <div class="container grid g4">
+      {site.facts.map((f) => (
+        <div class="card fact"><div class="v">{f.value}</div><div class="l"><L v={f.label} /></div></div>
+      ))}
+    </div>
+  </section>
+</Base>

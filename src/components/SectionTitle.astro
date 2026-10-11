@@ -1,0 +1,9 @@
+---
+import L from './L.astro';
+const { title, sub = null } = Astro.props;
+---
+<div class="section-title">
+  <h2><L v={title} /></h2>
+  <div class="divider"><span>❖</span></div>
+  {sub && <p><L v={sub} /></p>}
+</div>

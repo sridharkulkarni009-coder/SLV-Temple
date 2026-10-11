@@ -1,0 +1,34 @@
+---
+import L from './L.astro';
+import { load, makeUI } from '../lib/content.js';
+const n = load('navaratri');
+const u = makeUI();
+---
+<div class="countdown" id="nv-banner" data-start={n.start} data-end={n.end}
+  data-live-kn={u('navaratri_live').kn} data-live-en={u('navaratri_live').en}
+  data-soon-kn={u('navaratri_soon').kn} data-soon-en={u('navaratri_soon').en}
+  data-days-kn={u('days_word').kn} data-days-en={u('days_word').en}
+  data-over-kn={u('navaratri_over').kn} data-over-en={u('navaratri_over').en}>
+  <a href="/navaratri/">🪔 {n.edition}<L v={u('edition_label')} /> · {n.start} → {n.end}</a>
+  <span id="nv-text"></span>
+</div>
+<script is:inline>
+  (function () {
+    var el = document.getElementById('nv-banner');
+    if (!el) return;
+    var d = el.dataset;
+    function ymd(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+    function both(fn) { return ['kn', 'en'].map(function (l) { return '<span class="l-' + l + '">' + fn(l) + '</span>'; }).join(''); }
+    function get(k, l) { return d[k + (l === 'kn' ? 'Kn' : 'En')]; }
+    var now = new Date(); now.setHours(0, 0, 0, 0);
+    var s = ymd(d.start), e = ymd(d.end), t = document.getElementById('nv-text');
+    if (now < s) {
+      var n = Math.round((s - now) / 864e5);
+      t.innerHTML = ' · ' + both(function (l) { return get('soon', l) + ' ' + n + ' ' + get('days', l); });
+    } else if (now <= e) {
+      t.innerHTML = ' · ' + both(function (l) { return get('live', l); });
+    } else {
+      t.innerHTML = ' · ' + both(function (l) { return get('over', l); });
+    }
+  })();
+</script>

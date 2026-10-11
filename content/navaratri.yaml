@@ -1,0 +1,121 @@
+# ============================================================
+#  NAVARATRI  -  edit this file every year (dates, programme).
+#  Dates use  YYYY-MM-DD.   en = English,  kn = Kannada
+#  NOTE: the day-wise forms/tithis below are the standard Nava Durga
+#  order. Please confirm with the temple priest and adjust if needed.
+# ============================================================
+
+year: 2026
+edition: 10            # 10th Navaratri at this temple
+start: "2026-10-11"
+end: "2026-10-21"
+
+intro:
+  - en: "Navaratri means 'nine nights'. For these days we worship Goddess Durga in her nine divine forms (Nava Durga), celebrating the victory of good over evil, light over darkness and dharma over adharma."
+    kn: "ನವರಾತ್ರಿ ಎಂದರೆ 'ಒಂಬತ್ತು ರಾತ್ರಿಗಳು'. ಈ ದಿನಗಳಲ್ಲಿ ದುರ್ಗಾದೇವಿಯನ್ನು ನವದುರ್ಗೆಯರ ರೂಪದಲ್ಲಿ ಆರಾಧಿಸಿ, ಕೆಡುಕಿನ ಮೇಲೆ ಒಳಿತಿನ, ಕತ್ತಲೆಯ ಮೇಲೆ ಬೆಳಕಿನ ಹಾಗೂ ಅಧರ್ಮದ ಮೇಲೆ ಧರ್ಮದ ವಿಜಯವನ್ನು ಆಚರಿಸುತ್ತೇವೆ."
+  - en: "The festival ends with Vijayadashami (Dasara), the day of victory. This year is the 10th Navaratri celebrated at our temple."
+    kn: "ವಿಜಯದಶಮಿ (ದಸರಾ) ವಿಜಯದ ದಿನದೊಂದಿಗೆ ಹಬ್ಬ ಸಮಾಪ್ತಿಯಾಗುತ್ತದೆ. ನಮ್ಮ ದೇವಸ್ಥಾನದಲ್ಲಿ ಇದು 10ನೇ ವರ್ಷದ ನವರಾತ್ರಿ ಉತ್ಸವ."
+
+daily_programme:
+  - time: "~ 7:00 AM"
+    icon: "🪔"
+    title: { en: "Morning Pooja", kn: "ಬೆಳಗಿನ ಪೂಜೆ" }
+    text: { en: "Daily pooja and alankara of the Lord and the Goddess.", kn: "ಸ್ವಾಮಿ ಮತ್ತು ದೇವಿಗೆ ನಿತ್ಯ ಪೂಜೆ ಹಾಗೂ ಅಲಂಕಾರ." }
+  - time: { en: "Evening", kn: "ಸಂಜೆ" }
+    icon: "🎶"
+    title: { en: "Bhajane", kn: "ಭಜನೆ" }
+    text: { en: "Devotional singing by devotees.", kn: "ಭಕ್ತರಿಂದ ಭಕ್ತಿಗೀತೆಗಳ ಭಜನೆ." }
+  - time: { en: "Evening", kn: "ಸಂಜೆ" }
+    icon: "🛕"
+    title: { en: "Rathotsava", kn: "ರಥೋತ್ಸವ" }
+    text: { en: "The Lord is taken out in a decorated chariot procession.", kn: "ಅಲಂಕೃತ ರಥದಲ್ಲಿ ಸ್ವಾಮಿಯ ಮೆರವಣಿಗೆ." }
+
+# Special events. Set  date: "YYYY-MM-DD"  once known (leave "" if not decided).
+special_events:
+  - icon: "💍"
+    date: ""
+    title: { en: "Kalyanotsava", kn: "ಕಲ್ಯಾಣೋತ್ಸವ" }
+    text: { en: "The divine wedding ceremony of Lord Venkateshwara with Sri Padmavati and Sri Bhu Devi.", kn: "ಶ್ರೀ ವೆಂಕಟೇಶ್ವರ ಸ್ವಾಮಿಯವರ ಶ್ರೀ ಪದ್ಮಾವತಿ ಮತ್ತು ಶ್ರೀ ಭೂದೇವಿಯರೊಂದಿಗಿನ ದಿವ್ಯ ವಿವಾಹ ಮಹೋತ್ಸವ." }
+  - icon: "🔥"
+    date: ""
+    title: { en: "Durga Devi Homa", kn: "ದುರ್ಗಾದೇವಿ ಹೋಮ" }
+    text: { en: "A sacred fire ritual invoking the blessings of Goddess Durga for protection, strength and prosperity.", kn: "ರಕ್ಷಣೆ, ಶಕ್ತಿ ಮತ್ತು ಸಮೃದ್ಧಿಗಾಗಿ ದುರ್ಗಾದೇವಿಯ ಅನುಗ್ರಹ ಬೇಡುವ ಪವಿತ್ರ ಹೋಮ." }
+
+dos:
+  - { en: "Bathe and wear clean, traditional clothes before visiting.", kn: "ಸ್ನಾನ ಮಾಡಿ ಶುಭ್ರ, ಸಾಂಪ್ರದಾಯಿಕ ಉಡುಪು ಧರಿಸಿ ಬನ್ನಿ." }
+  - { en: "Join the morning pooja and evening bhajane with family.", kn: "ಕುಟುಂಬದೊಂದಿಗೆ ಬೆಳಗಿನ ಪೂಜೆ ಮತ್ತು ಸಂಜೆ ಭಜನೆಯಲ್ಲಿ ಪಾಲ್ಗೊಳ್ಳಿ." }
+  - { en: "Offer flowers, fruits or a donation as per your devotion.", kn: "ನಿಮ್ಮ ಭಕ್ತಿಗನುಸಾರ ಹೂವು, ಹಣ್ಣು ಅಥವಾ ದೇಣಿಗೆ ಅರ್ಪಿಸಿ." }
+  - { en: "Keep the temple premises clean and quiet.", kn: "ದೇವಸ್ಥಾನದ ಆವರಣವನ್ನು ಸ್ವಚ್ಛ ಮತ್ತು ಶಾಂತವಾಗಿಡಿ." }
+donts:
+  - { en: "Avoid loud talk and mobile calls inside the temple.", kn: "ದೇವಸ್ಥಾನದೊಳಗೆ ಜೋರಾಗಿ ಮಾತನಾಡುವುದು ಮತ್ತು ಫೋನ್ ಕರೆ ಮಾಡುವುದನ್ನು ತಪ್ಪಿಸಿ." }
+  - { en: "Do not wear footwear inside the temple.", kn: "ದೇವಸ್ಥಾನದೊಳಗೆ ಪಾದರಕ್ಷೆ ಧರಿಸಬೇಡಿ." }
+  - { en: "Do not litter or waste prasada.", kn: "ಕಸ ಹಾಕಬೇಡಿ, ಪ್ರಸಾದ ವ್ಯರ್ಥ ಮಾಡಬೇಡಿ." }
+
+# Day-by-day. "date" is when it happens. Edit "temple" for each day's local programme.
+days:
+  - date: "2026-10-11"
+    color: "#d93a2b"
+    name: { en: "Shailaputri", kn: "ಶೈಲಪುತ್ರಿ" }
+    title: { en: "Day 1 - Pratipada", kn: "ದಿನ 1 - ಪಾಡ್ಯ" }
+    meaning: { en: "Daughter of the Himalayas. Worshipped for strength and a firm foundation.", kn: "ಹಿಮವಂತನ ಪುತ್ರಿ. ಶಕ್ತಿ ಮತ್ತು ಸ್ಥಿರ ಅಡಿಪಾಯಕ್ಕಾಗಿ ಆರಾಧಿಸಲಾಗುತ್ತದೆ." }
+    temple: { en: "Ghata sthapana, morning pooja, evening bhajane.", kn: "ಘಟಸ್ಥಾಪನೆ, ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ." }
+  - date: "2026-10-12"
+    color: "#e8e8e8"
+    name: { en: "Brahmacharini", kn: "ಬ್ರಹ್ಮಚಾರಿಣಿ" }
+    title: { en: "Day 2 - Dwitiya", kn: "ದಿನ 2 - ಬಿದಿಗೆ" }
+    meaning: { en: "The goddess of penance and devotion. Grants patience and perseverance.", kn: "ತಪಸ್ಸು ಮತ್ತು ಭಕ್ತಿಯ ದೇವಿ. ತಾಳ್ಮೆ ಮತ್ತು ಸ್ಥೈರ್ಯ ನೀಡುವಳು." }
+    temple: { en: "Morning pooja, evening bhajane.", kn: "ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ." }
+  - date: "2026-10-13"
+    color: "#c2185b"
+    name: { en: "Chandraghanta", kn: "ಚಂದ್ರಘಂಟಾ" }
+    title: { en: "Day 3 - Tritiya", kn: "ದಿನ 3 - ತದಿಗೆ" }
+    meaning: { en: "Bears a crescent moon like a bell. Removes fear and brings courage and peace.", kn: "ಅರ್ಧಚಂದ್ರನನ್ನು ಘಂಟೆಯಂತೆ ಧರಿಸಿರುವವಳು. ಭಯ ನೀಗಿಸಿ ಧೈರ್ಯ, ಶಾಂತಿ ನೀಡುವಳು." }
+    temple: { en: "Morning pooja, evening bhajane.", kn: "ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ." }
+  - date: "2026-10-14"
+    color: "#1e56c8"
+    name: { en: "Kushmanda", kn: "ಕೂಷ್ಮಾಂಡಾ" }
+    title: { en: "Day 4 - Chaturthi", kn: "ದಿನ 4 - ಚೌತಿ" }
+    meaning: { en: "The creator of the universe with her gentle smile. Gives health and energy.", kn: "ಮಂದಹಾಸದಿಂದ ಬ್ರಹ್ಮಾಂಡವನ್ನು ಸೃಷ್ಟಿಸಿದ ದೇವಿ. ಆರೋಗ್ಯ ಮತ್ತು ಚೈತನ್ಯ ನೀಡುವಳು." }
+    temple: { en: "Morning pooja, evening bhajane.", kn: "ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ." }
+  - date: "2026-10-15"
+    color: "#f2b705"
+    name: { en: "Skandamata", kn: "ಸ್ಕಂದಮಾತಾ" }
+    title: { en: "Day 5 - Panchami", kn: "ದಿನ 5 - ಪಂಚಮಿ" }
+    meaning: { en: "Mother of Lord Skanda (Kartikeya). The embodiment of motherly love.", kn: "ಸ್ಕಂದನ (ಕಾರ್ತಿಕೇಯ) ತಾಯಿ. ಮಾತೃವಾತ್ಸಲ್ಯದ ಸ್ವರೂಪ." }
+    temple: { en: "Morning pooja, evening bhajane.", kn: "ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ." }
+  - date: "2026-10-16"
+    color: "#2e9e4f"
+    name: { en: "Katyayani", kn: "ಕಾತ್ಯಾಯನಿ" }
+    title: { en: "Day 6 - Shashthi", kn: "ದಿನ 6 - ಷಷ್ಠಿ" }
+    meaning: { en: "The warrior goddess who destroyed Mahishasura. Gives courage to overcome obstacles.", kn: "ಮಹಿಷಾಸುರನನ್ನು ಸಂಹರಿಸಿದ ವೀರ ದೇವಿ. ಅಡೆತಡೆಗಳನ್ನು ಗೆಲ್ಲುವ ಧೈರ್ಯ ನೀಡುವಳು." }
+    temple: { en: "Morning pooja, evening bhajane.", kn: "ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ." }
+  - date: "2026-10-17"
+    color: "#6b6f76"
+    name: { en: "Kalaratri", kn: "ಕಾಳರಾತ್ರಿ" }
+    title: { en: "Day 7 - Saptami", kn: "ದಿನ 7 - ಸಪ್ತಮಿ" }
+    meaning: { en: "The fierce form that destroys darkness and ignorance. Protects from all evil.", kn: "ಕತ್ತಲೆ ಮತ್ತು ಅಜ್ಞಾನವನ್ನು ನಾಶಮಾಡುವ ಉಗ್ರ ರೂಪ. ಎಲ್ಲಾ ಕೆಡುಕಿನಿಂದ ರಕ್ಷಿಸುವಳು." }
+    temple: { en: "Morning pooja, evening bhajane.", kn: "ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ." }
+  - date: "2026-10-18"
+    color: "#ff8c1a"
+    name: { en: "Mahagauri", kn: "ಮಹಾಗೌರಿ" }
+    title: { en: "Day 8 - Ashtami (Durgashtami)", kn: "ದಿನ 8 - ಅಷ್ಟಮಿ (ದುರ್ಗಾಷ್ಟಮಿ)" }
+    meaning: { en: "The serene, radiant goddess. Washes away sins and grants peace.", kn: "ಶಾಂತ, ತೇಜಸ್ವಿ ದೇವಿ. ಪಾಪಗಳನ್ನು ತೊಳೆದು ಶಾಂತಿ ನೀಡುವಳು." }
+    temple: { en: "Morning pooja, evening bhajane.", kn: "ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ." }
+  - date: "2026-10-19"
+    color: "#7b3fb0"
+    name: { en: "Siddhidatri", kn: "ಸಿದ್ಧಿದಾತ್ರಿ" }
+    title: { en: "Day 9 - Navami (Mahanavami)", kn: "ದಿನ 9 - ನವಮಿ (ಮಹಾನವಮಿ)" }
+    meaning: { en: "Giver of all siddhis (spiritual powers). Ayudha Puja is performed on this day.", kn: "ಎಲ್ಲಾ ಸಿದ್ಧಿಗಳನ್ನು ನೀಡುವವಳು. ಈ ದಿನ ಆಯುಧ ಪೂಜೆ ನಡೆಯುತ್ತದೆ." }
+    temple: { en: "Morning pooja, evening bhajane.", kn: "ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ." }
+  - date: "2026-10-20"
+    color: "#e0a419"
+    name: { en: "Vijayadashami", kn: "ವಿಜಯದಶಮಿ" }
+    title: { en: "Day 10 - Dashami (Dasara)", kn: "ದಿನ 10 - ದಶಮಿ (ದಸರಾ)" }
+    meaning: { en: "The day of victory of good over evil. Auspicious for new beginnings and learning.", kn: "ಒಳಿತಿನ ವಿಜಯದ ದಿನ. ಹೊಸ ಆರಂಭ ಮತ್ತು ವಿದ್ಯಾಭ್ಯಾಸಕ್ಕೆ ಶುಭದಿನ." }
+    temple: { en: "Morning pooja, evening bhajane. Details to be announced.", kn: "ಬೆಳಗಿನ ಪೂಜೆ, ಸಂಜೆ ಭಜನೆ. ವಿವರಗಳನ್ನು ತಿಳಿಸಲಾಗುವುದು." }
+  - date: "2026-10-21"
+    color: "#d4a017"
+    name: { en: "Conclusion", kn: "ಸಮಾರೋಪ" }
+    title: { en: "Day 11 - Samapti", kn: "ದಿನ 11 - ಸಮಾಪ್ತಿ" }
+    meaning: { en: "The festival concludes with thanksgiving and prasada for all devotees.", kn: "ಕೃತಜ್ಞತೆ ಮತ್ತು ಭಕ್ತರೆಲ್ಲರಿಗೂ ಪ್ರಸಾದದೊಂದಿಗೆ ಉತ್ಸವ ಮುಕ್ತಾಯ." }
+    temple: { en: "Details to be announced.", kn: "ವಿವರಗಳನ್ನು ತಿಳಿಸಲಾಗುವುದು." }

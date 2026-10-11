@@ -1,0 +1,109 @@
+---
+import '../styles/global.css';
+import L from '../components/L.astro';
+import { load, en, makeUI } from '../lib/content.js';
+
+const { path = '', description = '' } = Astro.props;
+const site = load('site');
+const u = makeUI();
+
+const nav = [
+  ['', 'nav_home'],
+  ['navaratri/', 'nav_navaratri'],
+  ['about/', 'nav_about'],
+  ['gallery/', 'nav_gallery'],
+  ['donate/', 'nav_donate'],
+  ['contact/', 'nav_contact'],
+];
+const pageTitle = `${site.name.kn} | ${site.name.en}` + (site.institution?.en ? ` - ${site.institution.en}` : '');
+const desc = description || `${en(site.name)} - ${en(site.city)}`;
+const ld = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'HinduTemple',
+  name: en(site.name),
+  alternateName: [site.name.kn, en(site.institution)].filter(Boolean),
+  telephone: site.phones[0],
+  foundingDate: String(site.established),
+  address: { '@type': 'PostalAddress', streetAddress: en(site.address), addressLocality: 'Vijayapura', addressRegion: 'Karnataka', addressCountry: 'IN' },
+  openingHours: 'Mo-Su 06:00-21:00',
+});
+---
+<!doctype html>
+<html lang="kn" data-lang="kn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc} />
+    <meta name="theme-color" content="#bf2d44" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={desc} />
+    <script type="application/ld+json" set:html={ld}></script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Noto+Sans+Kannada:wght@400;500;700&family=Noto+Serif+Kannada:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script is:inline>
+      // Apply saved language before the page paints (default: Kannada). ?lang=en also works.
+      (function () {
+        var q = /[?&]lang=(en|kn)/.exec(location.search);
+        var l = q ? q[1] : (localStorage.getItem('lang') || 'kn');
+        if (q) localStorage.setItem('lang', l);
+        document.documentElement.setAttribute('data-lang', l);
+        document.documentElement.lang = l;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content / ವಿಷಯಕ್ಕೆ ಹೋಗಿ</a>
+    <div class="topstrip"><L v={site.tagline} /></div>
+    <header class="header">
+      <div class="container header-in">
+        <a class="brand" href="/">
+          <img src="/favicon.svg" alt="" width="40" height="40" />
+          <span>
+            <strong><L v={site.name} /></strong>
+            <small>{site.institution?.en ? <L v={site.institution} /> : <L v={site.city} />}</small>
+          </span>
+        </a>
+        <nav class="nav" id="nav">
+          {nav.map(([p, key]) => (
+            <a href={`/${p}`} class={path === p ? 'active' : ''}><L v={u(key)} /></a>
+          ))}
+          <button class="langbtn" id="langbtn" type="button" aria-label="Language / ಭಾಷೆ"><L v={u('lang_switch')} /></button>
+        </nav>
+        <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+      </div>
+    </header>
+
+    <main id="main"><slot /></main>
+
+    <footer class="footer">
+      <div class="container foot-in">
+        <div>
+          <strong><L v={site.name} /></strong>
+          {site.institution?.en && <p class="foot-peeta"><L v={site.institution} /></p>}
+          <p><L v={site.address} /></p>
+        </div>
+        <div>
+          {site.phones.map((p) => <p><a href={`tel:${p.replace(/\s/g, '')}`}>{p}</a></p>)}
+        </div>
+        <div>
+          <p><L v={u('footer_text')} /></p>
+          <p class="mantra"><L v={site.tagline} /></p>
+        </div>
+      </div>
+    </footer>
+
+    <script is:inline>
+      document.getElementById('langbtn').addEventListener('click', function () {
+        var root = document.documentElement;
+        var l = root.getAttribute('data-lang') === 'kn' ? 'en' : 'kn';
+        root.setAttribute('data-lang', l);
+        root.lang = l;
+        localStorage.setItem('lang', l);
+      });
+    </script>
+  </body>
+</html>
